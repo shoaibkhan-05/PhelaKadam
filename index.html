@@ -1,0 +1,433 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pehla Kadam Foundation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: notebook-page site. Graph-paper hero, ruled-line section dividers, one marigold highlighter used for emphasis. */
+:root {
+  --paper: #F6F7FB;
+  --paper-2: #E9EDF6;
+  --card: #FFFFFF;
+  --ink: #16233F;
+  --ink-soft: #4A5878;
+  --line: #C9D1E3;
+  --grid: rgba(22, 35, 63, 0.07);
+  --accent: #F0A202;
+  --accent-ink: #1A1300;
+  --teal: #0F7B77;
+  --l1: #D5DBEA;
+  --l2: #9FB0D6;
+  --l3: #5F7BBF;
+  --l4: #0F7B77;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1626;
+    --paper-2: #17203A;
+    --card: #162038;
+    --ink: #EEF1F9;
+    --ink-soft: #A8B3CF;
+    --line: #2B3858;
+    --grid: rgba(238, 241, 249, 0.06);
+    --accent: #F5B332;
+    --accent-ink: #1A1300;
+    --teal: #4FC3BD;
+    --l1: #2B3858;
+    --l2: #3E5A93;
+    --l3: #5F83CC;
+    --l4: #4FC3BD;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1626;
+  --paper-2: #17203A;
+  --card: #162038;
+  --ink: #EEF1F9;
+  --ink-soft: #A8B3CF;
+  --line: #2B3858;
+  --grid: rgba(238, 241, 249, 0.06);
+  --accent: #F5B332;
+  --accent-ink: #1A1300;
+  --teal: #4FC3BD;
+  --l1: #2B3858;
+  --l2: #3E5A93;
+  --l3: #5F83CC;
+  --l4: #4FC3BD;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+.wrap {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.25rem, 7vw, 4.25rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.015em; }
+h3 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.005em; }
+p { margin: 0; max-width: 65ch; }
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+.hl {
+  background: linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%);
+  padding-inline: 0.08em;
+}
+
+/* Header */
+.site-head { border-bottom: 1px solid var(--line); }
+.site-head .wrap {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.75rem 1.5rem; padding-block: 1rem;
+}
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+.brand-mark { width: 1.9rem; height: 1.9rem; flex: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+nav a { color: var(--ink); text-decoration: none; font-weight: 600; padding-block: 0.25rem; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom-color: var(--accent); }
+
+/* Hero */
+.hero {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 2.5rem; padding-block: clamp(2.5rem, 7vw, 4.5rem); align-items: center; }
+.hero-copy { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
+.hero-copy p { font-size: 1.15rem; color: var(--ink-soft); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.btn {
+  display: inline-block; font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+  padding: 0.75rem 1.25rem; border-radius: 4px; text-decoration: none; cursor: pointer; border: 2px solid var(--ink);
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn-primary:hover { filter: brightness(1.06); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--paper-2); }
+
+/* Reading ladder card */
+.ladder { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.ladder h3 { font-size: 1.05rem; }
+.bar-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.bar-title { display: flex; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+.bar { display: flex; height: 2.25rem; border-radius: 3px; overflow: hidden; border: 1px solid var(--line); }
+.bar span { display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; min-width: 0; }
+.bar .s1 { background: var(--l1); color: var(--ink); }
+.bar .s2 { background: var(--l2); color: #0B1530; }
+.bar .s3 { background: var(--l3); color: #FFFFFF; }
+.bar .s4 { background: var(--l4); color: #FFFFFF; }
+:root[data-theme="dark"] .bar .s4, :root[data-theme="dark"] .bar .s3 { color: #0B1530; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bar .s4, :root:not([data-theme="light"]) .bar .s3 { color: #0B1530; }
+}
+.legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; list-style: none; margin: 0; padding: 0; }
+.legend li { display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; color: var(--ink-soft); }
+.legend i { width: 0.8rem; height: 0.8rem; border-radius: 2px; border: 1px solid var(--line); display: inline-block; }
+.note { font-size: 0.85rem; color: var(--ink-soft); }
+
+/* Stats strip */
+.strip { border-bottom: 1px solid var(--line); background: var(--paper-2); }
+.strip dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 0; padding-block: 1.5rem; }
+.strip dt { font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); order: 2; }
+.strip dd { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.4rem); font-variant-numeric: tabular-nums; order: 1; }
+.strip div { display: flex; flex-direction: column; gap: 0.1rem; }
+
+/* Sections */
+section.block { border-bottom: 1px solid var(--line); scroll-margin-top: 0.5rem; }
+section.block > .wrap { padding-block: clamp(2.5rem, 7vw, 4.5rem); display: flex; flex-direction: column; gap: 2rem; }
+.sec-head { display: flex; flex-direction: column; gap: 0.6rem; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; }
+.about-grid .story { display: flex; flex-direction: column; gap: 1rem; }
+.principles { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.principles li { padding-block: 1rem; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 0.2rem; }
+.principles li:last-child { border-bottom: 1px solid var(--line); }
+.principles strong { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; }
+.principles span { color: var(--ink-soft); }
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.team li { display: flex; gap: 0.9rem; align-items: center; min-width: 0; }
+.avatar { flex: none; width: 3.25rem; height: 3.25rem; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; }
+.team b { display: block; font-weight: 600; }
+.team small { color: var(--ink-soft); font-size: 0.92rem; }
+
+/* Services */
+.services { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.service { display: grid; grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 14rem); gap: 0.75rem 2rem; padding-block: 1.5rem; border-top: 1px solid var(--line); align-items: start; }
+.service:last-child { border-bottom: 1px solid var(--line); }
+.service .tag { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink); background: var(--paper-2); border: 1px solid var(--line); padding: 0.25rem 0.5rem; border-radius: 3px; justify-self: start; }
+.service .body { display: flex; flex-direction: column; gap: 0.4rem; }
+.service .body p { color: var(--ink-soft); }
+.service .when { font-size: 0.95rem; color: var(--ink-soft); }
+.service .when b { display: block; font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 400; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; }
+.contact-info { display: flex; flex-direction: column; gap: 1rem; }
+.contact-info p { color: var(--ink-soft); }
+.contact-info address { font-style: normal; display: flex; flex-direction: column; gap: 0.25rem; user-select: text; }
+form { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.field { display: flex; flex-direction: column; gap: 0.3rem; }
+.field label { font-weight: 600; font-size: 0.95rem; }
+input, select, textarea {
+  font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 0.65rem 0.75rem; width: 100%; min-width: 0;
+}
+textarea { min-height: 7rem; resize: vertical; }
+#form-status { font-size: 0.95rem; color: var(--ink-soft); min-height: 1.5em; }
+#form-status.ok { color: var(--teal); font-weight: 600; }
+
+footer .wrap { padding-block: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; color: var(--ink-soft); font-size: 0.92rem; }
+
+@media (max-width: 820px) {
+  .hero .wrap, .about-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .strip dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team { grid-template-columns: minmax(0, 1fr); }
+  .service { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Pehla Kadam Foundation, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--ink)"/>
+        <path d="M8 22 L14 22 L14 16 L20 16 L20 10 L25 10" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="square"/>
+      </svg>
+      Pehla Kadam
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="label">Education NGO &middot; Raigad district, Maharashtra</span>
+        <h1 id="hero-title">Every child in the village reads a <span class="hl">story</span> by Class 3.</h1>
+        <p>Pehla Kadam runs evening learning centres, a digital literacy lab and teacher training in nine villages. We measure one thing first: can the child read.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#contact">Volunteer or donate</a>
+          <a class="btn btn-ghost" href="#services">See our programmes</a>
+        </div>
+      </div>
+
+      <div class="ladder" role="group" aria-label="Reading levels of enrolled children, baseline versus now">
+        <h3>Where our children sit on the reading ladder</h3>
+        <div class="bar-group">
+          <div class="bar-title"><span class="label">Baseline, June 2025</span><span class="label">n = 1,240</span></div>
+          <div class="bar" aria-label="Baseline: letter 38 percent, word 31, paragraph 21, story 10">
+            <span class="s1" style="flex: 38">38%</span>
+            <span class="s2" style="flex: 31">31%</span>
+            <span class="s3" style="flex: 21">21%</span>
+            <span class="s4" style="flex: 10">10%</span>
+          </div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-title"><span class="label">Now, October 2026</span><span class="label">n = 1,240</span></div>
+          <div class="bar" aria-label="Now: letter 12 percent, word 24, paragraph 31, story 33">
+            <span class="s1" style="flex: 12">12%</span>
+            <span class="s2" style="flex: 24">24%</span>
+            <span class="s3" style="flex: 31">31%</span>
+            <span class="s4" style="flex: 33">33%</span>
+          </div>
+        </div>
+        <ul class="legend">
+          <li><i style="background: var(--l1)"></i>Letter</li>
+          <li><i style="background: var(--l2)"></i>Word</li>
+          <li><i style="background: var(--l3)"></i>Paragraph</li>
+          <li><i style="background: var(--l4)"></i>Story</li>
+        </ul>
+        <p class="note">Highest level each child can read aloud without help. Sample figures for this demo site.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <dl>
+        <div><dt>Children enrolled</dt><dd>1,240</dd></div>
+        <div><dt>Learning centres</dt><dd>18</dd></div>
+        <div><dt>Villages</dt><dd>9</dd></div>
+        <div><dt>Volunteer teachers</dt><dd>64</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="about" class="block" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">About Us</span>
+        <h2 id="about-title">Started under a banyan tree in 2019</h2>
+      </div>
+      <div class="about-grid">
+        <div class="story">
+          <p>Meera Iyer, a retired schoolteacher, began with eleven children and a borrowed blackboard in Kolad. Their parents worked the fields until dark, and the government school was two buses away.</p>
+          <p>Today the same evening class runs in 18 centres, taught by local volunteers who finished Class 12 and want to stay in the village. We train them, pay them a stipend and visit every centre each fortnight.</p>
+          <p>We are a registered public charitable trust. Our accounts and learning results are published every June.</p>
+        </div>
+        <ul class="principles">
+          <li><strong>Reading first</strong><span>Every other subject depends on it, so every centre starts there.</span></li>
+          <li><strong>Teachers from the village</strong><span>Children learn better from someone they see at the well the next morning.</span></li>
+          <li><strong>Measure and publish</strong><span>We test each child twice a year and share the results, good or poor.</span></li>
+        </ul>
+      </div>
+      <ul class="team" aria-label="Leadership">
+        <li><span class="avatar" aria-hidden="true">MI</span><div><b>Meera Iyer</b><small>Founder and trustee</small></div></li>
+        <li><span class="avatar" aria-hidden="true">RS</span><div><b>Rafiq Shaikh</b><small>Programme lead</small></div></li>
+        <li><span class="avatar" aria-hidden="true">AD</span><div><b>Anjali Deshmukh</b><small>Teacher training</small></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services" class="block" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Services</span>
+        <h2 id="services-title">Four programmes, one goal</h2>
+      </div>
+      <ul class="services">
+        <li class="service">
+          <span class="tag">Class 1 to 5</span>
+          <div class="body">
+            <h3>Evening Learning Centres</h3>
+            <p>Two hours of reading, writing and arithmetic in small groups of fifteen, using picture books in Marathi and simple English.</p>
+          </div>
+          <div class="when"><b>When</b>Mon to Sat, 5:00 to 7:00 pm</div>
+        </li>
+        <li class="service">
+          <span class="tag">Class 6 to 10</span>
+          <div class="body">
+            <h3>Digital Literacy Lab</h3>
+            <p>Twelve refurbished laptops running offline lessons. Students learn typing, spreadsheets and how to fill in a scholarship form.</p>
+          </div>
+          <div class="when"><b>When</b>Sat and Sun, 10:00 am to 1:00 pm</div>
+        </li>
+        <li class="service">
+          <span class="tag">Girls, Class 8+</span>
+          <div class="body">
+            <h3>Stay-in-School Scholarship</h3>
+            <p>Yearly support for uniforms, bus passes and exam fees, paired with a mentor who meets the family twice a term.</p>
+          </div>
+          <div class="when"><b>Applications</b>Open every April</div>
+        </li>
+        <li class="service">
+          <span class="tag">For volunteers</span>
+          <div class="body">
+            <h3>Teacher Training</h3>
+            <p>A six-day course on teaching early reading, then monthly classroom visits and a peer group where teachers swap what worked.</p>
+          </div>
+          <div class="when"><b>Next batch</b>January 2027</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="block" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Contact</span>
+        <h2 id="contact-title">Teach, give or visit a centre</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Come to any centre between 5 and 7 pm and sit in on a class. Volunteers who can spare two evenings a week are especially welcome.</p>
+          <address>
+            <span class="label">Office</span>
+            <span>Pehla Kadam Foundation, Kolad, Raigad 402304</span>
+            <span class="label" style="margin-top: 0.75rem">Email</span>
+            <span>hello@pehlakadam.example</span>
+          </address>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-topic">I would like to</label>
+            <select id="f-topic" name="topic">
+              <option>Volunteer as a teacher</option>
+              <option>Donate</option>
+              <option>Visit a centre</option>
+              <option>Apply for a scholarship</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="msg"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Pehla Kadam Foundation</span>
+    <span>A fictional organisation, made as a sample AI-generated website.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("form-status");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("f-name").value.trim();
+    var email = document.getElementById("f-email").value.trim();
+    status.className = "";
+    if (!name || email.indexOf("@") < 1) {
+      status.textContent = "Please enter your name and a valid email address.";
+      return;
+    }
+    status.className = "ok";
+    status.textContent = "Thank you, " + name + ". This is a sample site, so no message was sent.";
+    form.reset();
+  });
+})();
+</script>
+
+</body></html>
